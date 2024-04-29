@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery Dropdown</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  }
+  .container {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <select id="imageDropdown" onchange="showImage()">
+    <option value="">Select an image</option>
+    <option value="AAPL.jpg">AAPL</option>
+    <!-- Add more options here -->
+  </select>
+  <br>
+  <img id="displayImage" src="" alt="" style="display:none;">
+</div>
+
+<script>
+  function showImage() {
+    var image = document.getElementById('imageDropdown').value;
+    var displayImage = document.getElementById('displayImage');
+    if (image) {
+      displayImage.src = image;
+      displayImage.style.display = 'block';
+    } else {
+      displayImage.style.display = 'none';
+    }
+  }
+</script>
+</body>
+</html>
