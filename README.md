@@ -23,8 +23,8 @@ Set up this tool on your local system by following these steps:
 1. Clone the project repository from GitHub: [https://github.com/shreyashguptas/News_sentiment_correlation_project](https://github.com/shreyashguptas/News_sentiment_correlation_project)
 2. Ensure Python 3.8 or later is installed on your system.
 3. Install required Python packages: `pip install os pandas numpy dateutil vaderSentiment matplotlib`
-4. Launch the application: `python app.py`
-5. Access the web interface via your browser here.
+4. Launch the application: `Project_code.ipynb`
+5. Access the web interface via your browser [here](https://shreyashg.com/News%20Sentiment%20Project%20code/dashboard.html).
 
 ## Required Python Packages
 
@@ -40,6 +40,7 @@ Set up this tool on your local system by following these steps:
 - **Web Scraping Fragility**: Changes in the layout of news websites can disrupt the scraping functions, necessitating regular updates to the code.
 - **Sentiment Analysis Accuracy**: Financial jargon can complicate the accuracy of sentiment classification.
 - **Resource Intensity**: The process of handling and analyzing large data sets can be computationally demanding.
+- **Code limitations**: Just for the scope of this project the code does not automatically scrapes news articles. We used Octoparse which is a tool used to scrape. The fetching of news articles and stock prices must be changed to your required date range and requirements.
 
 ## Future Directions
 
@@ -55,11 +56,7 @@ This project is freely available under the MIT License, permitting broad use and
 
 ## Contact
 
-For further information, please reach out to any of the project contributors:
-
-- Tandem Young
-- Jacob Meaders
-- Shreyash Gupta
+For further information, please reach out to @shreyashguptas on Github.
 
 ## Group Members
 
