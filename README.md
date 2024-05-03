@@ -1,88 +1,68 @@
 # News_sentiment_correlation_project
- FINN_Group_Project
 
-![Embedded HTML](embed.svg)
+## Introduction
 
+Welcome to the Financial News Sentiment Analyzer! This tool is designed to help users gauge the impact of news sentiment on financial markets. By aggregating and analyzing news articles, it highlights how sentiments expressed in financial news can correlate with market movements, providing insights that can guide investment decisions.
 
-<div>
-  <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Sentiment and Stock Price Correlation Dashboard</title>
-    <link rel="icon" href="Favicon.png" type="image/x-icon">
-    <style>
-      body {
-        font-family: 'Arial', sans-serif;
-        background-color: #000000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-      }
-      select {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin-bottom: 20px;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-      }
-      .container {
-        text-align: center;
-      }
-      h1 {
-        font-size: 2em; /* Change the font size */
-        text-align: center;
-        color: #FFFFFF; /* Change the color */
-        font-family: 'Arial', sans-serif; /* Change the font family */
-        font-weight: bold; /* Make the text bold */
-        text-transform: uppercase; /* Make the text uppercase */
-        letter-spacing: 2px; /* Increase the space between letters */
-        margin-bottom: 20px; /* Add some space below the title */
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>News Sentiment and Stock Price Correlation Dashboard</h1>
-      <select id="imageDropdown" onchange="showImage()">
-        <option value="">Select an image</option>
-        <option value="images/AAPL_stock_price_sentiment_price_change.png">AAPL</option>
-        <option value="images/AMZN_stock_price_sentiment_price_change.png">AMZN</option>
-        <option value="images/GOOGL_stock_price_sentiment_price_change.png">GOOGL</option>
-        <option value="images/MSFT_stock_price_sentiment_price_change.png">MSFT</option>
-        <option value="images/TSLA_stock_price_sentiment_price_change.png">TSLA</option>
-        <option value="images/META_stock_price_sentiment_price_change.png">META</option>
-        <option value="images/V_stock_price_sentiment_price_change.png">V</option>
-        <option value="images/DIS_stock_price_sentiment_price_change.png">DIS</option>
-        <option value="images/JMP_stock_price_sentiment_price_change.png">JPM</option>
-        <option value="images/KO_stock_price_sentiment_price_change.png">KO</option>
-        <option value="images/NVDA_stock_price_sentiment_price_change.png">NVDA</option>
-      </select>
-      <br>
-      <img id="displayImage" src="" alt="" style="display:none;">
-    </div>
+## Project Overview
 
-    <script>
-      function showImage() {
-        var image = document.getElementById('imageDropdown').value;
-        var displayImage = document.getElementById('displayImage');
-        if (image) {
-          displayImage.src = image;
-          displayImage.style.display = 'block';
-        } else {
-          displayImage.style.display = 'none';
-        }
-      }
-    </script>
-  </body>
-</html>
-</div>
+Our application simplifies the analysis of financial news impact on markets. Traditionally, understanding this impact involved manually reading numerous articles, summarizing them, and then correlating their sentiment with market trends—often a very time-consuming task. This project automates these processes through advanced natural language processing (NLP) and sentiment analysis techniques.
+
+## How It Works
+
+1. **Web Scraping**: Utilizes Python scripts to scrape financial news from websites like Bloomberg, Reuters, and WSJ.
+2. **Article Summarization**: Employs NLP libraries to extract key information from articles, streamlining the data for easier processing.
+3. **Sentiment Analysis**: Analyzes the sentiment of each article using the VADER algorithm, classifying sentiments into positive, negative, or neutral categories based on both the headline and the content.
+4. **Data Visualization**: Visualizes sentiment scores alongside financial market data, presenting trends and correlations through an interactive dashboard.
+5. **User Interaction**: Through a web interface, users can select specific news sources and financial assets to tailor the analysis to their needs.
+
+## Installation Instructions
+
+Set up this tool on your local system by following these steps:
+
+1. Clone the project repository from GitHub: [https://github.com/shreyashguptas/News_sentiment_correlation_project](https://github.com/shreyashguptas/News_sentiment_correlation_project)
+2. Ensure Python 3.8 or later is installed on your system.
+3. Install required Python packages: `pip install os pandas numpy dateutil vaderSentiment matplotlib`
+4. Launch the application: `python app.py`
+5. Access the web interface via your browser here.
+
+## Required Python Packages
+
+- `os`: For operating system dependent functionality.
+- `pandas`: For data manipulation and analysis.
+- `numpy`: For support with large, multi-dimensional arrays and matrices.
+- `dateutil`: For parsing dates.
+- `vaderSentiment`: For sentiment analysis.
+- `matplotlib`: For creating static, interactive, and animated visualizations in Python.
+
+## Potential Pitfalls & Challenges
+
+- **Web Scraping Fragility**: Changes in the layout of news websites can disrupt the scraping functions, necessitating regular updates to the code.
+- **Sentiment Analysis Accuracy**: Financial jargon can complicate the accuracy of sentiment classification.
+- **Resource Intensity**: The process of handling and analyzing large data sets can be computationally demanding.
+
+## Future Directions
+
+Enhance the accuracy of sentiment analysis with advanced NLP models. Broaden the scope to include analysis of earnings call transcripts or regulatory filings. Consider developing this tool into a commercial product for investment firms.
+
+## How to Contribute
+
+Contributions to the project are welcome! You can help by improving functionality, refining the user interface, or fixing bugs. Check our contribution guidelines for more details on how to submit pull requests.
+
+## License
+
+This project is freely available under the MIT License, permitting broad use and modification.
+
+## Contact
+
+For further information, please reach out to any of the project contributors:
+
+- Tandem Young
+- Jacob Meaders
+- Shreyash Gupta
+
+## Group Members
+
+- Tandem Young
+- Jacob Meaders
+- Shreyash Gupta
